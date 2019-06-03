@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>Happyusers ThreeJS Test App</title>
+    <style>
+        body { margin: 0; }
+        canvas { width: 100%; height: 100%; }
+        img {width:200px; height:200px;border:1px solid #000; display:block; margin:auto; margin-top:10px;}
+        .main_viewport { width:calc(100vw - 300px); height:100%; float: left;}
+        .side_panel { width: 250px; height: 100%; float:right; }
+    </style>
+    <script src="lib/three.js"></script>
+    <script src="lib/OrbitControls.js"></script>
+    <script src="lib/LoaderSupport.js"></script>
+    <script src="lib/OBJLoader.js"></script>
+    <script src="app.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="main_viewport" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+    </div>
+    <div class="side_panel">
+        <img src="images/cube.png"
+             draggable="true"
+             model-url="models/cube.obj"
+             ondragstart="dragStart(event)">
+        <img src="images/torus.png"
+             draggable="true"
+             model-url="models/torus.obj"
+             ondragstart="dragStart(event)">
+        <img src="images/teapot.png"
+             draggable="true"
+             model-url="models/teapot.obj"
+             ondragstart="dragStart(event)">
+    </div>
+    <script>
+        window.addEventListener('load',function() {
+            App.initialize();
+            App.start();
+        });
+    </script>
+</body>
+</html>

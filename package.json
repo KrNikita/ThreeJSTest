@@ -1,0 +1,12 @@
+{
+  "name": "ThreeJSTest",
+  "author": "Nikita Kramarenko <lebron.mail@gmail.com>",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "npm run open",
+    "open": "concurrently \"http-server -p 8888\" \"start http://127.0.0.1:8888/index.html\""
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
